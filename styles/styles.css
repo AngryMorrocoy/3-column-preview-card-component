@@ -1,0 +1,109 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* ### Neutral ### */
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body,
+main {
+  min-height: 100vh;
+  color: var(--very-light-gray);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.card-deck {
+  padding: 1.6rem;
+  --border-radius: 0.7rem;
+}
+
+.card-deck > :nth-child(1) {
+  background-color: var(--bright-orange);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  --button-color: var(--bright-orange);
+}
+
+.card-deck > :nth-child(2) {
+  background-color: var(--dark-cyan);
+  --button-color: var(--dark-cyan);
+}
+
+.card-deck > :nth-child(3) {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  --button-color: var(--very-dark-cyan);
+}
+
+.card {
+  padding: 3.2rem;
+  display: grid;
+  gap: 2.2rem;
+}
+
+.card__content {
+  --content-fsz: 0.9rem;
+  font-size: var(--content-fsz);
+  color: var(--transparent-white);
+  line-height: calc(var(--content-fsz) + 0.65rem);
+}
+
+.card__title {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+.card__learn-more {
+  padding: 1rem;
+  background-color: var(--very-light-gray);
+  max-width: 9.8rem;
+  border-radius: 4rem;
+  font-size: 0.8rem;
+
+  align-self: flex-end;
+
+  color: var(--button-color);
+}
+
+.card__learn-more:hover,
+.card__learn-more:focus {
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--very-light-gray);
+  box-shadow: inset 0 0 0 2px var(--very-light-gray);
+}
