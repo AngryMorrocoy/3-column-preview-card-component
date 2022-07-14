@@ -72,6 +72,7 @@ main {
   padding: 3.2rem;
   display: grid;
   gap: 2.2rem;
+  max-width: 20.5rem;
 }
 
 .card__content {
@@ -106,4 +107,22 @@ main {
   background: none;
   color: var(--very-light-gray);
   box-shadow: inset 0 0 0 2px var(--very-light-gray);
+}
+
+@media screen and (min-width: 1000px) {
+  .card-deck {
+    display: flex;
+  }
+
+  .card-deck > :nth-child(1) {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+
+  .card-deck > :nth-child(3) {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+
+  .card {
+    min-height: 32rem;
+  }
 }
